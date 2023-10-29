@@ -7,7 +7,7 @@ console.log('url',url);
 
 router.get('/', async (req, res) => {
   try {
-    const userData = await fetch('https://catfact.ninja/fact')
+    const userData = await fetch(url)
       .then(res => res.json());
     res.render('cat/fact', { userData }); 
     console.log(userData);
